@@ -5,7 +5,9 @@ const Schema = mongoose.Schema;
 //schema can be change easily here
 //we create a schema here
 const userSchema = new Schema({
-    googleID: String
+    googleID: String,
+    displayName: String,
+    dates:[Date]
 });
 //load the schema we just create into mongoose
 mongoose.model('users', userSchema);

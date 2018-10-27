@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
+import Payment from './Payment'
 
 
 class Header extends Component {
@@ -11,10 +12,23 @@ class Header extends Component {
                 return;
             //find out user is not logged in
             case false:
-                return <li><a href='/auth/google'>Login with Google</a></li>;
+                return <li>
+                            <a href='/auth/google' className="waves-effect waves-light btn">
+                                Login with Google
+                            </a>
+                        </li>;
             //find out user already logged in
             default:
-                return <li><a href='/api/logout'>Log out</a></li>;
+                return [
+                    <li key='1'>
+                        <Payment/>
+                    </li>,
+                    <li key='2'>
+                        <a href='/api/logout' className="btn btn-default btn-sm lbtn">
+                            Log out
+                        </a>
+                    </li>
+                ];
         }
     }
     render(){
@@ -26,7 +40,7 @@ class Header extends Component {
                         to={this.props.auth?'/surveys':'/'}
                         className="left brand-logo"
                     >
-                        JHMA Student System
+                        {this.props.auth?"Hi, " + this.props.auth.displayName:'JHMA App'}
                     </Link>
                     <ul className="right">
                         {this.renderContent()}

@@ -19,7 +19,7 @@ class Dashboard extends Component {
           <p>First Line
              Second Line
       </p>
-          <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
+          <a href="#!" className="secondary-content"><i className="material-icons"></i></a>
         </li>
         <li className="collection-item avatar">
           <i className="material-icons circle green">insert_chart</i>
@@ -27,7 +27,7 @@ class Dashboard extends Component {
           <p>First Line
              Second Line
       </p>
-          <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
+          <a href="#!" className="secondary-content"><i className="material-icons"></i></a>
         </li>
         <li className="collection-item avatar">
           <i className="material-icons circle red">play_arrow</i>
@@ -35,7 +35,7 @@ class Dashboard extends Component {
           <p>First Line
              Second Line
       </p>
-          <a href="#!" className="secondary-content"><i className="material-icons">grade</i></a>
+          <a href="#!" className="secondary-content"><i className="material-icons"></i></a>
         </li>
       </ul>
     );
